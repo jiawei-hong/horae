@@ -3,8 +3,14 @@
         "browser": true,
         "es2021": true
     },
-    "plugins": ["prettier", "simple-import-sort"],
-    "extends": ["aribnb", "prettier"],
+    "plugins": [
+        "prettier",
+        "simple-import-sort"
+    ],
+    "extends": [
+        "aribnb",
+        "prettier"
+    ],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -17,6 +23,7 @@
         "no-process-exit": "off",
         "object-shorthand": "off",
         "class-methods-use-this": "off",
-        "simple-import-sort/imports": "error"
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error"
     }
 }
