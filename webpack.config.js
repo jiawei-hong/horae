@@ -1,11 +1,11 @@
-import path from 'path';
+const path = require('path');
 
-export default {
+module.exports = {
   target: 'node',
   entry: './src/index.ts',
   output: {
     path: path.resolve('./', 'dist'),
-    filename: 'index.js',
+    filename: 'horae.js',
     libraryTarget: 'umd',
   },
   module: {
