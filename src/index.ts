@@ -2,7 +2,7 @@ import { ConfigType } from './constants';
 import { Config } from './type';
 import fs from 'fs';
 
-class Horae<T> {
+class Horae<T extends Object> {
   config: Config<T> = {
     name: 'config',
   };
@@ -25,6 +25,22 @@ class Horae<T> {
     } else {
       throw new Error(`[Error]: Not found file`);
     }
+  }
+
+  has(property: string) {
+    if (!this.config.data) return false;
+
+    let current = this.config.data;
+    const properties = property.split('.').filter(Boolean);
+
+    for (const property of properties) {
+      if (!current.hasOwnProperty(property)) {
+        return false;
+      }
+      current = current[property as keyof object];
+    }
+
+    return true;
   }
 }
 
