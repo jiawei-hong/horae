@@ -1,27 +1,14 @@
 import fs from 'fs';
 import { Horae } from '..';
+import { mockConfig } from '../constants/mock';
 
 jest.mock('fs');
 
 const mockFs = fs as jest.Mocked<typeof fs>;
+const config = JSON.stringify(mockConfig);
 
 describe('FileReader initialization', () => {
   it('should read the file correctly', () => {
-    const config = JSON.stringify({
-      name: 'horae',
-      type: 'json',
-      position: {
-        x: 100,
-        y: 200,
-      },
-      a: {
-        b: {
-          c: {
-            d: 100,
-          },
-        },
-      },
-    });
     mockFs.existsSync.mockReturnValue(true);
     mockFs.readFileSync.mockReturnValue(config);
 
