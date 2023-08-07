@@ -24,7 +24,7 @@ class Horae<T extends Object> {
       );
       this.config.data = data;
     } else {
-      throw new Error(`[Error]: Not found file`);
+      this.config.data = {} as T;
     }
   }
 
