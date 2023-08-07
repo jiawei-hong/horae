@@ -75,6 +75,12 @@ class Horae<T extends Object> {
 
     return true;
   }
+
+  save() {
+    const fileName = `${this.config.name}.${this.config.type}`;
+
+    fs.writeFileSync(fileName, JSON.stringify(this.config.data, null, 2));
+  }
 }
 
 export { Horae };
