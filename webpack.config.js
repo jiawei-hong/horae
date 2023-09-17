@@ -1,12 +1,15 @@
 import path from 'path';
 
 export default {
-  target: 'node',
+  target: "browserslist:node 18",
   entry: './src/index.ts',
   output: {
-    path: path.resolve('./', 'dist'),
     filename: 'horae.js',
-    libraryTarget: 'umd',
+    path: path.resolve('./', 'dist'),
+    libraryTarget: 'module',
+  },
+  experiments: {
+    outputModule: true,
   },
   module: {
     rules: [
