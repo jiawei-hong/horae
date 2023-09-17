@@ -1,20 +1,16 @@
 {
   "name": "horae-configure",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "commonjs",
   "files": [
     "dist"
   ],
-  "main": "./dist/horae.umd.cjs",
-  "bin": {
-    "horae": "./bin/index.js"
-  },
+  "main": "./dist/horae.js",
   "module": "./dist/horae.js",
   "exports": {
     ".": {
-      "import": "./dist/horae.js",
-      "require": "./dist/horae.umd.cjs"
+      "import": "./dist/horae.js"
     }
   },
   "scripts": {
