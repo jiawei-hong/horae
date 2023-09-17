@@ -8,7 +8,7 @@
   ],
   "main": "./dist/horae.umd.cjs",
   "bin": {
-    "haore": "./bin/index.js"
+    "horae": "./bin/index.js"
   },
   "module": "./dist/horae.js",
   "exports": {
