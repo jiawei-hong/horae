@@ -4,7 +4,7 @@ import fs from 'fs';
 import { getProperties } from './utils/property';
 
 class Horae<T extends Object> {
-  config: Config<T> = {
+  private config: Config<T> = {
     name: 'config',
   };
 
@@ -14,7 +14,7 @@ class Horae<T extends Object> {
     this.initialize();
   }
 
-  initialize() {
+  private initialize() {
     const fileName = `${this.config.name}.${this.config.type}`;
     const hasFile = fs.existsSync(fileName);
 
@@ -30,7 +30,7 @@ class Horae<T extends Object> {
 
   set(key: string, value: any): void {
     const keys = getProperties(key);
-    let obj: Record<string, any> = {};
+    let obj: Record<string, any> = Object.assign({}, this.config.data);
 
     keys.reduce((acc, curr) => {
       if (curr === keys[keys.length - 1]) {
@@ -45,7 +45,7 @@ class Horae<T extends Object> {
   }
 
   get(key: string) {
-    if (!this.config.data) return;
+    if (!this.config.data) return undefined;
 
     let current = this.config.data;
     const properties = getProperties(key);
