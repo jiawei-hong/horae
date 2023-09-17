@@ -15,7 +15,13 @@ manipulate data using the `set`, `get`, `has`, and `save` functions.
 You can install "horae" via npm:
 
 ```bash
-npm install horae
+npm install horae-configure
+```
+
+You can install "horae" via yarn:
+
+```bash
+yarn add horae-configure
 ```
 
 # How to use?
