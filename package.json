@@ -1,8 +1,8 @@
 {
   "name": "horae-configure",
   "private": false,
-  "version": "0.0.4",
-  "type": "commonjs",
+  "version": "0.0.5",
+  "type": "module",
   "files": [
     "dist"
   ],
