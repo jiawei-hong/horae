@@ -19,6 +19,22 @@
     "build": "webpack --mode=production",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JiaWei-Hong/horae"
+  },
+  "author": "Jiawei-Hong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JiaWei-Hong/horae/issues"
+  },
+  "homepage": "https://github.com/JiaWei-Hong/horae#readme",
+  "keywords": [
+    "json",
+    "config",
+    "json-config",
+    "json-configure"
+  ],
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
