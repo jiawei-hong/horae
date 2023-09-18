@@ -73,7 +73,7 @@ horae.get('position.x'); // 100
 ### `save` method
 
 ```typescript
-horae.set('position.', 100);
+horae.set('position.x', 1000);
 horae.save();
 ```
 
